@@ -1,0 +1,62 @@
+@import '../app/teknoids.scss';
+
+.footer {
+    padding: 2rem 2rem 1rem 2rem;
+    border: .2rem solid;
+    width: 80vw;
+    margin: 0 auto;
+
+    h3{
+        font-size: 2rem;
+    }
+
+    p, a, span{
+        font-size: 1.5rem;
+    }
+
+    a {
+        &:hover{
+            color: $teknoids;
+            text-decoration: underline;
+        }
+    }
+
+    span{
+        padding: 0 .4rem;
+    }
+
+    .flexGrid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .column {
+        padding: 1rem;
+        margin: .5rem;
+        flex: 1 1 calc(25% - 1rem);
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .column {
+            flex: 1 1 calc(50% - 1rem);
+            /* For tablets, display two columns */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .column {
+            flex: 1 1 calc(100% - 1rem);
+            /* For mobile, display one column */
+        }
+    }
+
+
+    .footer_bottom {
+        margin: 1rem auto;
+        border-top: 0.2rem solid #444;
+        padding-top: 0.1rem;
+        text-align: center;
+    }
+}

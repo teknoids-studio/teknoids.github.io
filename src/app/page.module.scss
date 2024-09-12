@@ -1,0 +1,114 @@
+@import '../app/teknoids.scss';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+
+  .description {
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    font-size: 0.85rem;
+    max-width: var(--max-width);
+    width: 100%;
+    z-index: 2;
+    font-family: var(--font-mono);
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    p {
+      position: relative;
+      margin: 0;
+      padding: 1rem;
+      background-color: rgba(var(--callout-rgb), 0.5);
+      border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+      border-radius: var(--border-radius);
+    }
+  }
+
+  .code {
+    font-weight: 700;
+    font-family: var(--font-mono);
+    color: $code;
+    background-color: $tertiary
+  }
+
+  .services {
+    margin: 1rem 0 2rem 0;
+
+  }
+
+  .highlighted {
+    font-style: bold;
+    color: $teknoids;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(25%, auto));
+    max-width: 100%;
+    width: var(--max-width);
+  }
+
+  .flexGrid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .column {
+    
+    border: .2rem solid $commodore5;
+    padding: 1rem;
+    margin: .5rem;
+    flex: 1 1 calc(25% - 1rem);
+    text-align: center;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .card {
+    padding: 1rem 1.2rem;
+    border-radius: var(--border-radius);
+    background: rgba(var(--card-rgb), 0);
+    border: 1px solid rgba(var(--card-border-rgb), 0);
+  }
+
+  @media (max-width: 768px) {
+    .column {
+      flex: 1 1 calc(50% - 1rem);
+      /* For tablets, display two columns */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .column {
+      flex: 1 1 calc(100% - 1rem);
+      /* For mobile, display one column */
+    }
+  }
+}
+@media (max-width: 768px) {
+  .main {
+    padding: 4rem;
+    /* For tablets, display two columns */
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 2rem;
+    /* For tablets, display two columns */
+  }
+}
